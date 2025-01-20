@@ -18,6 +18,7 @@ html {
   background-color: #1b1919;
 }
 
+
 h1,
 h2,
 h3,
@@ -49,3 +50,175 @@ ol {
 .custom-scrollbar::-webkit-scrollbar-thumb {
   background-color: #D9D9D9;
 }
+
+.visually-hidden {
+   position: absolute;
+   inline-size: 1px;
+   block-size: 1px;
+   overflow: hidden;
+   clip: rect(0 0 0 0);
+   clip-path: inset(50%);
+   white-space: nowrap;
+}
+
+.page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;   
+}
+.content {
+    display:grid;
+    padding: 133px 30px;
+    grid-template-columns: 65% 35%; /* 741px i 399px паддинги боковые 60 и отступ внутри 1ячейки */
+    width: 100%;
+}
+
+.search-form {
+  display: flex;
+  justify-content: space-between; 
+  gap: 40px;
+  width: 100%;
+}
+
+.search-form > * {
+   flex-grow: 1;  /* Распределяем свободное пространство */
+}
+
+.search-form__fieldset {   
+    font-family: 'Fira Sans Condensed', sans-serif; /* попробовать применить и к лейблам с чекбоксами */
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21.6px;
+    color: #FFF;
+  }
+
+.search-form__fieldset-title {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    line-height: inherit;
+    font-weight: inherit;
+}
+
+.content__list-container {
+    height: 100%;
+    block-size: 298px; /* Вертикальный размер */
+    overflow-y: auto; /* Полоса прокрутки */ 
+}
+
+.content__list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.content__list-item {
+   gap: 30px;
+}
+
+.content__details {
+  display: grid;
+  align-items:end;
+  margin: 0;
+  padding: 0;  
+  gap: 26px;
+}
+
+/* .content__details h1 {
+    Как вариант для отступа между заголовком и контлистом
+} */   
+.content__video-card {
+    display: flex;
+    align-items: flex-start;
+}
+
+.content__video-card-thumbnail { /* видео из списка конт лист */
+    width: 194px;              
+    height: 103px;    
+    padding-right: 3px;         
+    object-fit: cover;        
+    object-position: center;  
+}
+
+.content__video-card-description-container {
+    flex-grow: 1;
+    width: 100%;
+}
+
+.result {
+  padding-right: 30px;
+  height: 100%;
+} 
+
+.result__video {
+   padding-top: 78px;
+   width: 100%;
+   height: 100%;
+   object-fit: contain; /* работает без него */ 
+  
+}
+.result__video-container {
+    width: 100%;
+    margin-bottom: 16px; /* отступ от поисковой формы */
+    
+}
+
+.search-form__fieldset {   /*Настройки для поисковой формы */
+    border:none;
+}
+
+.search-form__checkbox-list {  /* Чекбокс поисковой формы */
+  display: flex;
+  gap:15px;
+}
+
+.search-form__label {    /* тоже часть чекбокса, тут стили для инпутов расставляем их*/
+    display: flex;
+    width: fit-content;
+    font-size: inherit;
+    line-height: 21.6px;
+    
+}
+
+.title {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 75px;
+    line-height: 70.5px;
+}
+
+.content__accent {
+    color: #545050;
+}
+
+.content__video-card-title { /* Тайтл списка */
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  width: 198px;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 30px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+}
+
+.content__card-link {    /* отвечает за названия городов в списке */
+    text-decoration: none;
+    color: inherit;    
+}
+
+.content__video-card-description {
+    font-family: 'Fira Sans Condensed', sans-serif;
+    line-height: 16.2px;
+    font-size: 18px;
+    font-weight: 400;
+    display: -webkit-box;          /* возможность переполнения видео карточки */
+    -webkit-box-orient: vertical;  
+    overflow: hidden;              
+    -webkit-line-clamp: 3;         
+}
+
