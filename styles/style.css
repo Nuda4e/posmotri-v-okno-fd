@@ -161,6 +161,11 @@ ol {
     cursor: pointer;
 }
 
+.search-form__submit-button {
+    width: 194px;
+    height: 34px;
+}
+
 .more-button {
     width: 100%;
     margin-top: 33px;
@@ -196,7 +201,7 @@ ol {
 .search-form__checkbox-list {
     display: flex;
     /* Чекбокс поисковой формы */
-    gap: 15px;
+    gap: 13px;
     margin-bottom: 5px;
 }
 
@@ -365,9 +370,4 @@ ol {
     border: none;
     outline: none;
     text-decoration: underline;
-}
-
-.search-form__submit-button {
-    width: 194px;
-    height: 34px;
 }
