@@ -205,15 +205,15 @@ ol {
     border: 1px solid #FFF;
 }
 
-label .search-form__pseudo-checkbox::after {
+.search-form__pseudo-checkbox::after {
     content: '';
+    display: block;
     width: 15px;
     height: 15px;
     margin-top: 1px;
     margin-left: 1px;
     opacity: 0;
     background-color: #FFF;
-    background-position: center;
 }
 
 input:checked~.search-form__pseudo-checkbox::after {
@@ -224,7 +224,6 @@ input:checked~.search-form__pseudo-checkbox::after {
     margin-left: 1px;
     opacity: 1;
     background-color: #FFF;
-    background-position: center;
 }
 
 
@@ -308,6 +307,7 @@ input:checked~.search-form__pseudo-checkbox::after {
 }
 
 .content__card-link_current {
+    display: block;
     background-color: #545050;
 }
 
