@@ -16,6 +16,10 @@ html {
     background-color: #1b1919;
     inline-size: 1200px;
     block-size: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 
@@ -59,13 +63,6 @@ ol {
     block-size: 1px;
     clip-path: inset(50%);
     white-space: nowrap;
-}
-
-.page {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
 }
 
 .content {
